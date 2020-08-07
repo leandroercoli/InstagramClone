@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, ImageSourcePropType, View, Image } from 'react-native';
-const theme = "dark"
 
 interface Props {
   source: ImageSourcePropType

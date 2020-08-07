@@ -1,24 +1,11 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  StatusBar,
-  Dimensions,
-  FlatList,
-  Image,
-  ImageSourcePropType,
-  ViewToken,
-} from 'react-native';
-import { ViewTitle, Text } from './base/Text';
-import { IconCamera, IconPlane, IconMenuDots, IconSave, IconLike, IconLiked, IconComment } from './base/Icons';
-import moment from 'moment'
+import { StyleSheet, View, Dimensions, FlatList, Image, } from 'react-native';
+import { Text } from './base/Text';
+import { IconPlane, IconMenuDots, IconSave, IconLike, IconLiked, IconComment } from './base/Icons';
 import { Avatar } from './base/Avatar';
 import { dateTimeToNowString } from '../extra/helpers.extra';
 import { PostInterface, CommentInterface, ImgInterface } from '../redux/types';
 const { width } = Dimensions.get('window');
-const theme = "dark"
 const userId = "1" // id of logged user (should ideally be retreived from server and saved in localstorage/redux)
 
 interface HomeFeedProps {

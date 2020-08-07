@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Dimensions,
-} from 'react-native';
+import { StyleSheet, View, Dimensions, } from 'react-native';
 import { ViewTitle } from './base/Text';
 import { IconCamera, IconPlane } from './base/Icons';
 const { width } = Dimensions.get('window');
@@ -20,7 +12,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ countNotifications = 0 }
   return (
     <Header
       leftComponent={<IconCamera />}
-      rightComponent={<IconPlane onPress={()=>{}} badgeCount={countNotifications} />}>
+      rightComponent={<IconPlane onPress={() => { }} badgeCount={countNotifications} />}>
       <ViewTitle>Instagram</ViewTitle>
     </Header>
   );
@@ -53,16 +45,16 @@ const styles = StyleSheet.create({
     height: 56,
     width,
     backgroundColor: theme === "dark" ? '#1b1b1b' : "#fff",
-    display:'flex',
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center'
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   sideComponentContainer: {
     height: 56,
     flex: 0,
     paddingHorizontal: 5,
-    justifyContent:'center',
+    justifyContent: 'center',
   },
   childrenContainer: {
     flex: 1,

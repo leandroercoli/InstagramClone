@@ -1,7 +1,7 @@
 import { UPDATE_FEED, LIKE_POST, FeedActionTypes, PostInterface } from '../types';
 import { feedService } from '../../services';
 import { request, failure } from './common.actions';
-import { ActionCreator, Action } from 'redux';
+import { ActionCreator } from 'redux';
 
 const updateStoredFeedSuccess: ActionCreator<FeedActionTypes> = (posts: PostInterface[]) => {
   return { type: UPDATE_FEED, payload: posts };

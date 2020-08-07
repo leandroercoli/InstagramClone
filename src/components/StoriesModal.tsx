@@ -1,23 +1,18 @@
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
-  StatusBar,
   Dimensions,
   FlatList,
   Image,
-  TouchableOpacity,
   Modal,
 } from 'react-native';
-import { ViewTitle, Text } from './base/Text';
+import {  Text } from './base/Text';
 import { IconCamera, IconPlane, IconClose } from './base/Icons';
 import { Avatar } from './base/Avatar';
 import { dateTimeToNowString } from '../extra/helpers.extra';
 import { StoryInterface } from '../redux/types';
 const { width, height } = Dimensions.get('window');
-const theme = "dark"
 
 const Story: React.FC<StoryInterface & { onClose: () => void }> = ({ id, user, img, isSeen = false, isCloseFriend = false, datetime, onClose, interactionsBlocked }) => {
   const { username, avatar } = user || {}
@@ -46,13 +41,6 @@ const Story: React.FC<StoryInterface & { onClose: () => void }> = ({ id, user, i
       </View>
     </View>
   )
-}
-
-const viewabilityConfig = {
-  minimumViewTime: 3000,
-  viewAreaCoveragePercentThreshold: 100,
-  itemVisiblePercentThreshold: 75,
-  waitForInteraction: true,
 }
 
 interface StoriesModalProps {

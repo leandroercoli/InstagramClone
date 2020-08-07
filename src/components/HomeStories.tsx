@@ -10,7 +10,6 @@ import { Text } from './base/Text';
 import { Avatar } from './base/Avatar';
 import { StoryInterface } from '../redux/types';
 const { width } = Dimensions.get('window');
-const theme = "dark"
 
 interface HomeStoriesProps {
   stories: StoryInterface[]

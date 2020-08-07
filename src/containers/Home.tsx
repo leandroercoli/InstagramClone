@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
-  Text,
-  StatusBar,
   Dimensions,
 } from 'react-native';
 import { HomeHeader, HomeStories, HomeFeed, StoriesModal } from '../components'
