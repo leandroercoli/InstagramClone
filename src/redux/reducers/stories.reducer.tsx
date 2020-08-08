@@ -10,7 +10,7 @@ const initialState: StoriesState = {
   myStory: []
 };
 
-export function storiesReducer(state = initialState, action: StoriesActionTypes): StoriesState {
+export function storiesReducer(state: StoriesState = initialState, action: StoriesActionTypes): StoriesState {
   switch (action.type) {
     case UPDATE_STORIES:
     case WATCH_STORY: {

@@ -8,7 +8,7 @@ const initialState: FeedState = {
   posts: []
 };
 
-export function feedReducer(state = initialState, action: FeedActionTypes): FeedState {
+export function feedReducer(state: FeedState = initialState, action: FeedActionTypes): FeedState {
   switch (action.type) {
     case UPDATE_FEED: {
       return {
